@@ -45,5 +45,21 @@ main {
         main header #sns li i {
           font-size: 18px;
           color: #fff; }
+  main article {
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 5vw;
+    transform: translateY(-50%); }
+    main article p {
+      font: 4vw/1 "orbitron";
+      color: #fff;
+      margin-bottom: 20px; }
+      main article p strong {
+        opacity: 0.7; }
+    main article em {
+      font: bold 14px/1.2 "arial";
+      color: #fff;
+      letter-spacing: 2px; }
 
 /*# sourceMappingURL=style.css.map */

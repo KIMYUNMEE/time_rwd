@@ -49,4 +49,27 @@ main {
       }
     }
   }
+  article {
+    width: 40vw;
+    position: absolute;
+    top: 50%;
+    left: 5vw;
+    transform: translateY(-50%);
+
+    p {
+      font: 4vw/1 "orbitron";
+      color: #fff;
+      margin-bottom: 20px;
+
+      strong {
+        opacity: 0.7;
+      }
+    }
+
+    em {
+      font: bold 14px/1.2 "arial";
+      color: #fff;
+      letter-spacing: 2px;
+    }
+  }
 }
