@@ -1,3 +1,52 @@
 @charset 'UTF-8';
 @import "reset";
 @import url(http://fonts.googleapis.com/css?family=Orbitron);
+main {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/bg_morning.jpg);
+
+  header {
+    width: 90vw;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font: bold 30px/1 "orbitron";
+      color: #fff;
+    }
+    #gnb {
+      display: flex;
+
+      li {
+        margin: 0px 40px;
+
+        a {
+          font: bold 14px/1 "arial";
+          color: #fff;
+        }
+      }
+    }
+    #sns {
+      display: flex;
+      li {
+        margin: 0px 10px;
+
+        i {
+          font-size: 18px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

@@ -10,4 +10,40 @@ ul, ol, li {
 a {
   text-decoration: none; }
 
+main {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../img/bg_morning.jpg); }
+  main header {
+    width: 90vw;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    main header h1 {
+      font: bold 30px/1 "orbitron";
+      color: #fff; }
+    main header #gnb {
+      display: flex; }
+      main header #gnb li {
+        margin: 0px 40px; }
+        main header #gnb li a {
+          font: bold 14px/1 "arial";
+          color: #fff; }
+    main header #sns {
+      display: flex; }
+      main header #sns li {
+        margin: 0px 10px; }
+        main header #sns li i {
+          font-size: 18px;
+          color: #fff; }
+
 /*# sourceMappingURL=style.css.map */
