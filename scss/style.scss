@@ -10,7 +10,44 @@ main {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: url(../img/bg_morning.jpg);
+
+  &.morning {
+    background-image: url(../img/bg_morning.jpg);
+    figure {
+      background-image: url(../img/phone_morning.png);
+    }
+  }
+  &.afternoon {
+    background-image: url(../img/bg_afternoon.jpg);
+    figure {
+      background-image: url(../img/phone_afternoon.png);
+    }
+  }
+  &.evening {
+    background-image: url(../img/bg_evening.jpg);
+    figure {
+      background-image: url(../img/phone_evening.png);
+    }
+  }
+  &.night {
+    background-image: url(../img/bg_night.jpg);
+    figure {
+      background-image: url(../img/phone_night.png);
+    }
+  }
+
+  //낮테마일때 추가로 붙은 클래스면 dark_text로 잘 안보이는 글자색 어둡게 처리
+  &.dark_text {
+    header h1,
+    header #gnb li a,
+    header #sns li i,
+    article p,
+    article em,
+    figure .screen {
+      color: #555;
+    }
+  }
+
   .sky_cl1 {
     position: absolute;
     top: -100px;
@@ -25,7 +62,6 @@ main {
     opacity: 0;
     animation: cloud 40s linear 0s infinite;
   }
-
   @keyframes cloud {
     0% {
       left: -50%;
@@ -50,17 +86,14 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     h1 {
       font: bold 30px/1 "orbitron";
       color: #fff;
     }
     #gnb {
       display: flex;
-
       li {
         margin: 0px 40px;
-
         a {
           font: bold 14px/1 "arial";
           color: #fff;
@@ -71,7 +104,6 @@ main {
       display: flex;
       li {
         margin: 0px 10px;
-
         i {
           font-size: 18px;
           color: #fff;
@@ -85,17 +117,14 @@ main {
     top: 50%;
     left: 5vw;
     transform: translateY(-50%);
-
     p {
       font: 4vw/1 "orbitron";
       color: #fff;
       margin-bottom: 20px;
-
       strong {
         opacity: 0.7;
       }
     }
-
     em {
       font: bold 14px/1.2 "arial";
       color: #fff;
@@ -113,7 +142,6 @@ main {
     background-position: right top;
     background-size: contain;
     background-image: url(../img/phone_morning.png);
-
     .screen {
       width: 540px;
       height: 300px;
@@ -124,10 +152,25 @@ main {
       color: #fff;
       text-align: center;
       overflow: hidden;
+
+      em {
+        position: absolute;
+        top: 100px;
+        left: 80px;
+        line-height: 1;
+        font-size: 20px;
+        opacity: 0;
+
+        &.on {
+          opacity: 1;
+        }
+      }
+
       span {
         width: 90px;
         display: inline-block;
       }
+
       .cl1 {
         width: 300px;
         position: absolute;
@@ -154,7 +197,6 @@ main {
     bottom: 7vh;
     display: flex;
     justify-content: space-between;
-
     span {
       width: 23%;
       height: 100%;
@@ -167,7 +209,6 @@ main {
       letter-spacing: 2px;
       opacity: 0.7;
       transition: 0.5s;
-
       &.on {
         background: rgba(255, 255, 255, 0.6);
         color: #111;
