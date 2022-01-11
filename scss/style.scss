@@ -124,6 +124,10 @@ main {
       color: #fff;
       text-align: center;
       overflow: hidden;
+      span {
+        width: 90px;
+        display: inline-block;
+      }
       .cl1 {
         width: 300px;
         position: absolute;
