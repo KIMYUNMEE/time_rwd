@@ -105,6 +105,20 @@ main {
       color: #fff;
       text-align: center;
       overflow: hidden; }
+      main figure .screen .cl1 {
+        width: 300px;
+        position: absolute;
+        top: 0px;
+        left: -50%;
+        opacity: 0;
+        animation: cloud 40s linear 20s infinite; }
+      main figure .screen .cl2 {
+        width: 300px;
+        position: absolute;
+        top: 5%;
+        left: -50%;
+        opacity: 0;
+        animation: cloud 40s linear 0s infinite; }
   main nav {
     width: 90vw;
     height: 35px;
