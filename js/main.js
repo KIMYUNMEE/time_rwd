@@ -1,12 +1,11 @@
 ﻿const main = document.querySelector('main');
 const menus = document.querySelector('nav span');
-const time = document.querySelectorAll('.screen span');
+const numbers = document.querySelectorAll('.screen span');
 
-setInterval(()=>{
-  let now = new Date();
-  let hr = now.getHours();
-  let min = now.getMinutes();
-  let sec = now.getSeconds();
+setInterval(()=>{  
+  const times = setTime();
+  times.forEach((time,index) =>getTime(time, index));
+
 
   if(hr>=5 && hr<11){
     main.className = '';
@@ -23,12 +22,28 @@ setInterval(()=>{
   if(hr>=19 || hr<5){
     main.className='';
     main.classList.add('night');
-  }
+  }  
+},1000)
 
+function setTime(){
+  let now = new Date();
+  let hr = now.getHours();
+  let min = now.getMinutes();
+  let sec = now.getSeconds();
+  return [hr, min, sec];
+}
+
+function getTime(num,index){
+  if(num<10) num = '0'+num;
+  numbers[index].innerText = num;
+}
+
+ /*
   if(hr < 10) hr = '0'+hr;
   if(min < 10) min = '0'+min;
   if(sec < 10) sec = '0'+sec;
+  
   time[0].innerText = hr;
   time[1].innerText = min;
   time[2].innerText = sec;
-},1000)
+  */
